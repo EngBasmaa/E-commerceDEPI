@@ -70,3 +70,11 @@ button:not(:disabled) {
 
   border: 2px solid red;
 }
+
+
+/* ................. */
+
+select {
+  padding: 0.5rem 1rem;
+  width: 25rem
+}

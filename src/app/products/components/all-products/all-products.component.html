@@ -1,7 +1,7 @@
-<div class="box mt-5">
-  <div class="my-2 w-25">
-    <label for="" class="my-1">Categorie :</label>
-    <select class="form-control"(change)="filterCategory($event)">
+<div class="box mt-5 m-auto w-100">
+  <div class="my-2 mb-5 m-auto d-flex justify-content-center">
+    <label for="" class="my-1 mb-3 w-100">Categorie :</label>
+    <select title="category" class="form-control" (change)="filterCategory($event)">
       <option value="all" selected>All</option>
       <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
     </select>
@@ -15,7 +15,7 @@
           <p>{{item.description}}</p>
         </div>
         <div class="both px-3 mb-2 d-flex justify-content-between align-items-center">
-          <button class="btn btn-success">Add To Cart</button>
+          <button type="button" class="btn btn-success">Add To Cart</button>
           <span>{{item.price}} L.E</span>
         </div>
       </div>
