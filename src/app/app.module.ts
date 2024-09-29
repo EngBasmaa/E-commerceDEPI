@@ -6,18 +6,18 @@ import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HomeComponent } from './home/home.component';
+import { ProductsModule } from './products/products.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
-
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CommonModule
+    CommonModule, ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

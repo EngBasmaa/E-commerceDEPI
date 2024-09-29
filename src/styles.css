@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(./myTemp.css);
+
 body {
   padding: 0;
   margin: 0;
@@ -7,50 +8,12 @@ body {
 }
 
 * {
-  font-family: cursive;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-* {
   font-family: cursive, Courier, 'Courier New', monospace;
 }
 
-:root {
-  --dark: #0C0C0C;
-  --brown: #481E14;
-  --orange: #9B3922;
-  --light: #F2613F;
-  --lighter: #f9a390;
-  --white: #f8cfc6;
-}
-
-.mydark {
-  background-color: var(--dark);
-}
-
-.mybrown {
-  background-color: var(--brown);
-}
-
-.myorange {
-  background-color: var(--orange);
-}
-
-.mylight {
-  background-color: var(--light);
-}
-
-.mylighter {
-  background-color: var(--lighter);
-}
-
-.mywhite {
-  background-color: var(--white);
+main {
+  height: auto;
+  margin-top: 5rem;
 }
 
 h1 {
@@ -66,6 +29,7 @@ h4 {
 label {
   font-size: 1.4rem;
   color: var(--light);
+  align-items: center;
 }
 
 p {
@@ -74,5 +38,23 @@ p {
 }
 
 select {
-  width: 40rem !important
+  width: 40rem !important;
+  color: var(--dark);
+  height: 2rem;
+  align-items: center;
+}
+
+option {
+  color: var(--dark);
+}
+
+.select {
+  width: 30vw;
+  height: 2rem;
+  align-items: center;
+}
+
+
+option {
+  color: var(--dark);
 }
