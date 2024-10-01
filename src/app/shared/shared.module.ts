@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { SelectComponent } from './components/select/select.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SelectComponent } from './components/select/select.component';
     SpinnerComponent,
     FooterComponent,
     BannerComponent,
-    SelectComponent
+    SelectComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,7 @@ import { SelectComponent } from './components/select/select.component';
     RouterModule, NgbPaginationModule, LazyLoadImageModule],
   exports: [
     NavbarComponent,
-    SpinnerComponent, NgbPaginationModule, FooterComponent, BannerComponent, SelectComponent
+    SpinnerComponent, NgbPaginationModule, FooterComponent, BannerComponent, SelectComponent, ProductCardComponent
   ]
 })
 export class SharedModule { }

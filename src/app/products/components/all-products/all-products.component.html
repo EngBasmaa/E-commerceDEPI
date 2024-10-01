@@ -5,7 +5,7 @@
   <!-- products -->
   <div class="row product-list w-100" *ngIf="!loading">
     <div class="col-lg-3 col-md-3 col-sm-12 productsContainer product-item" *ngFor="let product of products  | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
-      <div class="item mylighter">
+      <!-- <div class="item mylighter">
         <img src="{{product.image}}" alt="image product">
         <div class="body">
           <h4>{{product.title}}</h4>
@@ -15,7 +15,10 @@
           <button type="button" class="btn btn-danger">Add To Cart</button>
           <span class="mywhite">{{product.price}} L.E</span>
         </div>
-      </div>
+      </div> -->
+
+      <app-product-card [product]="product"></app-product-card>
+
     </div>
 
 

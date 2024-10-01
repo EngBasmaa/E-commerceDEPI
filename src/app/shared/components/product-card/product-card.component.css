@@ -1,0 +1,81 @@
+.item {
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    margin: 30px;
+    margin-left: 0;
+    display: inline-block;
+    box-shadow: 0px 2px 5px rgba(202, 37, 16, 0.3);
+    border: 2px solid red;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 100%;
+    height: 200px;
+}
+
+p {
+    margin-bottom: 1rem;
+    height: 100px;
+    overflow: hidden;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+}
+
+h4 {
+    height: 6.5rem;
+    overflow: hidden;
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--orange)
+}
+
+.px-3 {
+    padding-right: 0.6rem !important;
+    padding-left: 0.6rem !important;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.productsContainer {
+    padding: auto
+}
+
+.both {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+span {
+    padding: 3px 7px;
+    border-radius: 30px;
+    font-size: 80%;
+    font-weight: 600;
+    color: var(--orange)
+}
+
+.btn-danger {
+    background: var(--light) !important;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--white) !important;
+    color: var(--light);
+    border: 2px solid var(--light) !important;
+}
+
+button:not(:disabled) {
+    font-size: 0.8rem
+}
