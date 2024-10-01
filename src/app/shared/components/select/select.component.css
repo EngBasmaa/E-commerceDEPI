@@ -1,0 +1,20 @@
+/* src/app/shared/components/category-filter/category-filter.component.css */
+#filter {
+    display: flex;
+    justify-content: space-between !important;
+    width: 30%;
+    margin: auto;
+    gap: 2rem
+}
+
+select {
+    border-radius: 1rem !important;
+    align-items: center;
+    height: 2.5rem
+}
+
+
+
+.form-control {
+    width: 200px;
+}

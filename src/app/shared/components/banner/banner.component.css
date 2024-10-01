@@ -1,0 +1,25 @@
+.container {
+    width: 100vw
+}
+
+.carousel-inner {
+    height: 57vh;
+}
+
+.carousel-inner img {
+    height: 60vh;
+    width: 100%
+}
+
+.carousel-indicators [data-bs-target] {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: var(--light)
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: var(--light)
+}

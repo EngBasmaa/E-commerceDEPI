@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { AllProductsComponent } from './components/all-products/all-products.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
 
@@ -12,7 +12,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule, FormsModule, NgxPaginationModule
   ]
   , exports: [
     ProductsDetailsComponent, AllProductsComponent

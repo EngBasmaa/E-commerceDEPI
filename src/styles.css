@@ -5,6 +5,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   background: var(--dark) !important;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -54,7 +56,4 @@ option {
   align-items: center;
 }
 
-
-option {
-  color: var(--dark);
-}
+/* ............... */

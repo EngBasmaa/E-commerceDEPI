@@ -1,9 +1,18 @@
-<app-navbar></app-navbar>
+<body>
 
-<main>
+  <header>
+    <app-navbar></app-navbar>
+  </header>
 
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
+  <main>
 
-</main>
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+
+  </main>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</body>

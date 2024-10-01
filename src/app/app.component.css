@@ -1,0 +1,22 @@
+body {
+    position: relative
+}
+
+main,
+.container,
+footer,
+header {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 56vh;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 3rem !important;
+}
+
+header {
+    padding: 0 !important;
+}
