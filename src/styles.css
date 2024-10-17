@@ -1,59 +1,8 @@
-@import url(./myTemp.css);
-
-body {
+/* You can add global styles to this file, and also import other style files */
+body{
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background: var(--dark) !important;
-  width: 100%;
-  overflow-x: hidden;
+  margin: 0!important;
 }
-
-* {
-  font-family: cursive, Courier, 'Courier New', monospace;
+*{
+  font-family: cursive;
 }
-
-main {
-  height: auto;
-  margin-top: 5rem;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: var(--lighter)
-}
-
-h4 {
-  font-size: 1.6rem;
-  color: var(--light)
-}
-
-label {
-  font-size: 1.4rem;
-  color: var(--light);
-  align-items: center;
-}
-
-p {
-  font-size: 1.2rem;
-  color: var(--orange)
-}
-
-select {
-  width: 40rem !important;
-  color: var(--dark);
-  height: 2rem;
-  align-items: center;
-}
-
-option {
-  color: var(--dark);
-}
-
-.select {
-  width: 30vw;
-  height: 2rem;
-  align-items: center;
-}
-
-/* ............... */

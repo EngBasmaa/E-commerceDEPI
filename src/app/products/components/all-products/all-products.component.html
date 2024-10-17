@@ -1,37 +1,13 @@
-<div class="box mt-4 m-auto w-100">
-  <app-select [categories]="categories" (categoryChanged)="onCategoryChange($event)">
-  </app-select>
-
-  <!-- products -->
-  <div class="row product-list w-100" *ngIf="!loading">
-    <div class="col-lg-3 col-md-3 col-sm-12 productsContainer product-item" *ngFor="let product of products  | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
-      <!-- <div class="item mylighter">
-        <img src="{{product.image}}" alt="image product">
-        <div class="body">
-          <h4>{{product.title}}</h4>
-          <p>{{product.description}}</p>
-        </div>
-        <div class="both px-3 mb-2 d-flex justify-content-between align-items-center">
-          <button type="button" class="btn btn-danger">Add To Cart</button>
-          <span class="mywhite">{{product.price}} L.E</span>
-        </div>
-      </div> -->
-
-      <app-product-card [product]="product"></app-product-card>
-
+<div class="box mt-5">
+  <div class="my-2 w-25">
+    <app-select [data]="categories" [title]="'Categories'" (selectedValue)="receiveCategory($event)"></app-select>
+  </div>
+  <div class="row" *ngIf="!loading">
+    <div class="col-md-3 col-sm-12 productsContainer" *ngFor="let item of products">
+      <app-product [data]="item" (item)="addToCart($event)"></app-product>
     </div>
-
-
-    <div class="pag mt-8 mb-10 py-5 d-flex justify-content-center align-items-center">
-      <pagination-controls (pageChange)="handlePageChange($event)"></pagination-controls>
-    </div>
-
-
-
-
   </div>
   <div class="text-center w-100" *ngIf="loading">
     <app-spinner></app-spinner>
   </div>
-
 </div>

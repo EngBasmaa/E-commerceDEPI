@@ -1,1 +1,55 @@
-<p>products-details works!</p>
+<div class="box">
+  <div class="row d-flex flex-row justify-content-between align-items-center" *ngIf="!loading && data">
+
+    <div class="col-md-6 col-sm-12">
+      <h1 class="mb-5 mt-3 text-center">{{data.title}}</h1>
+
+      <img [src]="data.image" alt="sas" />
+    </div>
+
+    <div class="boxx col-md-5 col-sm-12">
+      <div class="info">
+        <ul class="list-unstyled">
+          <li><strong>Category : </strong>{{data.category}}</li>
+          <li><strong>Description : </strong><br>{{data.description}}</li>
+        </ul>
+
+        <div class="detail d-flex flex-row justify-content-between">
+          <div>
+            <ul class="list-unstyled">
+
+              <li><strong>Rate : </strong>{{data.rating?.rate}}</li>
+              <li><strong>Count : </strong>{{data.rating?.count}}</li>
+              <li><strong>Price : </strong>{{data.price}} L.E</li>
+            </ul>
+          </div>
+
+          <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-success" *ngIf="!addButton" (click)="addButton=true">Add To Cart</button>
+
+            <div class="d-flex w-50" *ngIf="addButton">
+              <input type="number" class="form-control" [(ngModel)]="amount" min="1">
+              <button title="addition" type="button" class="btn btn-danger" (click)="add();addButton=false">Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- <button type="button" class="btn btn btn-primary">Add to Cart</button>
+        <button type="button" class="btn btn btn-primary">Buy Now</button>
+        <div class="quantity group">
+          <button type="button">-</button>
+          <input type="text" value="1" />
+          <button type="button">+</button>
+        </div> -->
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <div class="text-center w-100" *ngIf="loading">
+    <app-spinner></app-spinner>
+  </div>
+</div>

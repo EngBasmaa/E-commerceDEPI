@@ -5,20 +5,24 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
+import { FormsModule } from '@angular/forms';
 import { ProductsModule } from './products/products.module';
-import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    CartComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CommonModule, ProductsModule, NgbPaginationModule
+    ProductsModule,
+    CommonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

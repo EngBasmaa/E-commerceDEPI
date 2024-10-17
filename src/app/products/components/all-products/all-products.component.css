@@ -1,58 +1,11 @@
-.product-item {
-  padding: 10px;
-  /* margin-bottom: 10px; */
-  display: flex;
-  justify-content: space-between;
+.productsContainer {
+  border: 2px solid blue;
+  padding: auto
 }
 
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+.both {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  border: 2px solid red;
 }
-
-.ngx-pagination li {
-  width: 35px;
-  height: 35px;
-  border-radius: 2px;
-  background: var(--lighter) !important;
-}
-
-.pag {
-  background: var(--lighter);
-  width: 50%;
-  margin: auto;
-  border-radius: 2rem;
-  height: 3rem !important;
-  padding: 0 !important;
-  align-items: center !important;
-  margin-bottom: 1rem !important;
-}
-
-.ngx-pagination .pagination.previous a:before,
-.ngx-pagination .pagination.previous.disabled:before {
-  color: blue !important;
-}
-
-
-&.pagination-previous {
-  color: blue !important;
-}
-
-.pagination-controls,
-.pagination-template {
-  background: var(--lighter) !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  align-items: center !important;
-  height: 2.5rem !important
-}
-
-
-
-/* .pagination-controls .ngx-pagination li.current:hover,
-span {
-  background-color: var(--lighter) !important;
-} */
-
-/* .. */
