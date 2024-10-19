@@ -1,12 +1,9 @@
 .cartbox {
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 20px 20px;
-    margin-top: 2rem
-}
-
-h1 {
-    color: #921a40 !important
+    padding: 0 20px;
+    margin: 50px 0;
+    margin-top: 3rem;
 }
 
 .table .quantity {
@@ -55,8 +52,4 @@ tr input {
     background-color: a3e67779;
     color: #FFF !important;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.total {
-    margin-top: 5rem !important
 }

@@ -1,0 +1,162 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ................ */
+
+
+.row {
+    height: 100vh;
+    margin-top: 0 !important;
+    padding: 0;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto !important;
+    position: relative
+}
+
+
+
+label {
+    color: var(--orange) !important;
+    font-size: 1.2rem;
+}
+
+/* ................ */
+
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--orange);
+    outline: none;
+}
+
+input {
+    padding: 5px 1rem !important
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+button {
+    width: 50%;
+    padding: 12px 15px;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 10px;
+    color: var(--green);
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin: auto !important
+}
+
+button:hover {
+    background-color: var(--midlight) !important;
+}
+
+.form-group-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group-inline label {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red
+}
+
+.active {
+    border: 2px solid rgb(4, 223, 4)
+}
+
+.error-msg {
+    font-size: 1rem !important;
+    color: var(--orange) !important
+}
+
+button {
+    background: #f58986 !important;
+    width: 8rem;
+    color: grey;
+    position: relative;
+    bottom: 7rem;
+    padding: 5px 1.5rem !important;
+    border-radius: 2rem !important;
+    align-items: center !important;
+}
+
+button:hover {
+    background: brown !important;
+    color: #e8bdbc
+}
+
+h1 {
+    color: var(--bs-danger) !important;
+    height: 2rem;
+    padding-top: 2rem;
+}

@@ -1,0 +1,12 @@
+.row {
+    margin-top: 4rem !important
+}
+
+h1 {
+    color: #921a40
+}
+
+.img,
+.carousel-item {
+    width: 100%
+}

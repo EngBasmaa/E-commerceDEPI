@@ -1,5 +1,7 @@
-<div class="box mt-5">
-  <div class="my-2 w-25">
+<div class="box">
+  <h1 class="text-danger text-center">Products</h1>
+
+  <div class="my-2 w-25 ms-3">
     <app-select [data]="categories" [title]="'Categories'" (selectedValue)="receiveCategory($event)"></app-select>
   </div>
   <div class="row" *ngIf="!loading">

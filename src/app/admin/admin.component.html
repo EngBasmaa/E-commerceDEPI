@@ -1,0 +1,95 @@
+<div class="cartbox text-center">
+
+  <form [formGroup]="form">
+    <div class="row mt-3">
+
+      <div class="col-md-3">
+        <label for="">Start Date</label>
+        <input type="date" formControlName="start" class="form-control">
+      </div>
+
+      <div class="col-md-3">
+        <label for="">End Date</label>
+        <input type="date" formControlName="end" class="form-control">
+      </div>
+
+      <div class="col-md-2 d-flex align-items-end">
+        <button type="button" (click)="applyFilter()" class="btn btn-success">Apply</button>
+      </div>
+
+    </div>
+  </form>
+
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th></th>
+        <!-- <th>Name</th> -->
+        <th class="text-center">Date</th>
+        <th class="text-center">Quantity</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of carts; let index = index">
+        <!-- <td><img src="{{item.item.image}}" alt=""></td> -->
+        <!-- <td>{{item.item.title}}</td> -->
+        <td></td>
+        <td>{{item.date | date:"short"}}</td>
+        <td>
+          {{item.products.length}}
+        </td>
+        <td>
+          <!-- <button type="button" class="btn btn-danger" (click)="deleteProduct(index)">Delete</button> -->
+          <button type="button" class="btn btn-danger" (click)="deleteCart(item.id)">Delete</button>
+          <button type="button" class="btn btn-primary" (click)="view(index)" data-bs-toggle="modal" data-bs-target="#view">View</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+<!-- <div class="alert alert-success" role="alert" *ngIf="success"><strong>Well done!</strong> Your Order is Successfully sent</div> -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="view" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Product Details View</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products; let i=index">
+              <td><img [src]="item.item.image" style="width: 50px;" alt="product image" loading="lazy"></td>
+              <td>{{item.item.title}}</td>
+              <td>{{item.item.price | currency:'EGP'}} L.E</td>
+              <td>{{item.quantity}}</td>
+              <td>{{(item.item.price * item.quantity) | currency:'EGP'}} L.E</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

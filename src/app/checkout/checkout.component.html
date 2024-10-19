@@ -1,0 +1,83 @@
+<div class="container mt-5">
+    <h2>Checkout</h2>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+                    <label for="name">Full Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control" required />
+            <div *ngIf="checkoutForm.get('name')!.invalid && checkoutForm.get('name')!.touched" class="text-danger">
+              <div *ngIf="checkoutForm.get('name')!.errors?.['required']">
+                Full name is required.
+              </div>
+              <div *ngIf="checkoutForm.get('name')!.errors?.['minlength']">
+                Full name must be at least 3 characters long.
+              </div>
+            </div>
+          </div>
+        <div class="col-md-6 mb-3">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" class="form-control" required />
+          <div *ngIf="checkoutForm.get('email')!.invalid && checkoutForm.get('email')!.touched" class="text-danger">
+            A valid email is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="address">Address</label>
+        <textarea id="address" formControlName="address" class="form-control" required></textarea>
+        <div *ngIf="checkoutForm.get('address')!.invalid && checkoutForm.get('address')!.touched" class="text-danger">
+          Address is required.
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="city">City</label>
+          <input type="text" id="city" formControlName="city" class="form-control" required />
+          <div *ngIf="checkoutForm.get('city')!.invalid && checkoutForm.get('city')!.touched" class="text-danger">
+            City is required.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="zip">Zip Code</label>
+          <input type="text" id="zip" formControlName="zip" class="form-control" required />
+          <div *ngIf="checkoutForm.get('zip')!.invalid && checkoutForm.get('zip')!.touched" class="text-danger">
+            Zip code is required.
+          </div>
+        </div>
+      </div>
+  
+      <h4>Payment Information</h4>
+      <div class="mb-3">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" formControlName="cardNumber" class="form-control" required />
+        <div *ngIf="checkoutForm.get('cardNumber')!.invalid && checkoutForm.get('cardNumber')!.touched" class="text-danger">
+          Card number must be exactly 16 digits.
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="expiryDate">Expiry Date</label>
+          <input type="text" id="expiryDate" formControlName="expiryDate" class="form-control" required placeholder="MM/YY" />
+          <div *ngIf="checkoutForm.get('expiryDate')!.invalid && checkoutForm.get('expiryDate')!.touched" class="text-danger">
+            Expiry date is required.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" formControlName="cvv" class="form-control" required />
+          <div *ngIf="checkoutForm.get('cvv')!.invalid && checkoutForm.get('cvv')!.touched" class="text-danger">
+            CVV must be exactly 3 digits.
+          </div>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="checkoutForm.invalid">Complete Purchase</button>
+    </form>
+    <div *ngIf="successMessage" class="alert alert-success mt-3">
+      {{ successMessage }}
+    </div>
+  </div>
+  

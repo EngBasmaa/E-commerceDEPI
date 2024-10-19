@@ -6,14 +6,22 @@ import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CartComponent } from './cart/cart.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductsModule } from './products/products.module';
+import { AdminComponent } from './admin/admin.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
+    AdminComponent,
+    CheckoutComponent,
+    AdminLoginComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -22,7 +30,7 @@ import { ProductsModule } from './products/products.module';
     SharedModule,
     ProductsModule,
     CommonModule,
-    FormsModule,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

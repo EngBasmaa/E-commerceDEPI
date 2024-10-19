@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +13,7 @@ export class CartComponent implements OnInit {
   total: number = 0;
   success: boolean = false;
 
-  constructor(private service: CartService) { }
+  constructor(private service: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.getCartProducts();
@@ -57,9 +58,15 @@ export class CartComponent implements OnInit {
 
   getCartTotal() {
     this.total = 0;
-    for (let x of this.cartProducts) {
-      this.total += x.item.price * x.quantity;
-
+    for (let item of this.cartProducts) {
+      try {
+        // Ensure the item and price are properly defined
+        if (item && item.item && typeof item.item.price === 'number') {
+          this.total += item.item.price * item.quantity;
+        }
+      } catch (error) {
+        console.error('Error calculating cart total:', error);
+      }
     }
   }
 
@@ -77,7 +84,8 @@ export class CartComponent implements OnInit {
     this.service.creatNewCart(Model).subscribe(
       res => {
         this.success = true;
-        alert("Your order has been successfully placed!");
+        // Navigate to the checkout page
+
       },
       error => {
         console.error("There was an error!", error);
@@ -86,5 +94,9 @@ export class CartComponent implements OnInit {
     );
 
     console.log(Model);
+  }
+
+  goToCheckout() {
+    this.router.navigate(['/checkout']);  // Navigate to the checkout page
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'E-commerceDEPI';
+  showRender = false
+
+  constructor(private router: Router) { }
+
+  ngDoCheck(): void {
+    if (this.router.url.includes('adminLogin')) {
+      this.showRender = false;
+    } else {
+      this.showRender = true;
+    }
+  }
+
 }

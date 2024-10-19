@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../../services/products.service'
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-products-details',
@@ -11,6 +12,16 @@ export class ProductsDetailsComponent {
   dataId: any;
   data: any = {}
   loading: boolean = true
+
+  @Input() mydata!: Product
+
+  @Output() item = new EventEmitter()
+
+  addButton: boolean = false
+  amount: number = 1;
+
+
+
 
   constructor(private route: ActivatedRoute, private service: ProductsService) {
   }
@@ -37,15 +48,8 @@ export class ProductsDetailsComponent {
     })
   }
 
-  @Input() mydata: any = {}
-
-  @Output() item = new EventEmitter()
-
-  addButton: boolean = false
-  amount: number = 1;
-
-
   add() {
     this.item.emit({ item: this.mydata, quantity: this.amount })
   }
+
 }

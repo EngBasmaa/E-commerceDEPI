@@ -1,9 +1,10 @@
 <div class="cartbox">
-  <h1 class="text-danger">Shopping Cart</h1>
+  <h1 class="text-danger mb-5 text-center">Shopping Cart</h1>
   <div class="headcart">
     <p class="lead">You have <label class="text-danger">{{cartProducts.length}}</label> items in your cart</p>
-    <span class="text-danger card-header" (click)="clearCart()">Clear Shopping Cart</span>
   </div>
+
+
   <table class="table table-striped">
     <thead>
       <tr>
@@ -17,7 +18,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of cartProducts; let index = index">
-        <td><img src="{{item.item.image}}" alt=""></td>
+        <td><img src="{{item.item.image}}" alt="product image" loading="lazy"></td>
         <td>{{item.item.title}}</td>
         <td>{{item.item.Price}}</td>
         <td>
@@ -37,12 +38,14 @@
       <tr>
         <th></th>
         <th></th>
-        <th></th>
-        <th></th>
         <th>Total: {{total}} LE</th>
         <th><button class="btn btn-success" (click)="addCart()">Order Now</button></th>
+        <th></th>
+        <th></th>
       </tr>
     </tfoot>
   </table>
 </div>
-<div class="alert alert-success" role="alert" *ngIf="success"><strong>Well done!</strong> Your Order is Successfully sent</div>
+<div class="alert alert-success" role="alert" *ngIf="success"><strong>Well done!</strong> Your Order is Successfully sent <br>
+  <button type="button" routerLink="checkout" (click)="goToCheckout()">Complete you Payment</button>
+</div>

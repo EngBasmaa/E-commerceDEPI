@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-product',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  @Input() data: any = {}
+  @Input() data!: Product
 
   @Output() item = new EventEmitter()
 
@@ -17,7 +18,6 @@ export class ProductComponent {
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   add() {

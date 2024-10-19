@@ -15,11 +15,16 @@ export class CartService {
     return cart ? JSON.parse(cart) : [];
   }
 
+
+
   // Add new cart items to server
   creatNewCart(Model: any): Observable<any> {
-    return this.http.post(environment.baseApi + 'carts', Model);
+    const cartData = {
+      userId: Model.userId, // Ensure this field exists
+      products: Model.products // Ensure this is an array of products
+    };
+    return this.http.post(environment.baseApi + 'carts', cartData);
   }
-
   // Remove an item from the cart
   removeCartItem(item: any) {
     let cartItems = this.getCartItems();
@@ -50,4 +55,10 @@ export class CartService {
   clearCart() {
     localStorage.removeItem('cart');
   }
+
+  getCartById(cartId: number) {
+    return this.http.get(`${environment.baseApi}carts/${cartId}`);
+  }
+
+
 }

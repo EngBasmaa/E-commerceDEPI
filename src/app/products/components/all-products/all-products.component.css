@@ -1,11 +1,18 @@
 .productsContainer {
-  border: 2px solid blue;
   padding: auto
 }
 
 .both {
   flex-wrap: wrap;
   gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid brown;
+}
 
-  border: 2px solid red;
+.box {
+  margin-top: 4rem;
+}
+
+h1 {
+  color: #921a40
 }
