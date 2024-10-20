@@ -18,11 +18,11 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/adminLogin']" (click)="closeNavbar()" routerLinkActive="active">AdminLogin</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLoggedIn()">
           <a class="nav-link" [routerLink]="['/dashboard']" (click)="closeNavbar()" routerLinkActive="active">Dashboard</a>
         </li>
         <!--  *ngIf="isLoggedIn()" -->
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLoggedIn()">
           <a class="nav-link" (click)="logout()">Log Out</a>
         </li>
       </ul>

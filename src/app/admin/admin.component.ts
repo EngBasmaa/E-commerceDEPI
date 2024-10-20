@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CartsAdminService } from '../services/carts-admin.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { CartItem } from '../products/components/models/cartItem';
+import { CartItem } from '../models/cartItem';
 import { ProductsService } from '../products/services/products.service';
-import { Product } from '../products/components/models/product';
+// import { Product } from '../models/cartItem';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',

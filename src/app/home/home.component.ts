@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, OnDestroy } from '@angular/core';
+import { Product } from '../models/product';
+import { ProductsService } from '../products/services/products.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +9,30 @@ import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
   private intervalId: any;
+  products: Product[] = [];
+
+  constructor(private service: ProductsService) { }
+
+
+  ngOnInit(): void {
+    this.getProducts()
+  }
+
+  getProducts() {
+    this.service.getAllProducts().subscribe((res: any) => {
+      this.products = res
+    }, error => {
+      alert(error)
+    })
+  }
+  // .........................
 
   ngAfterViewInit() {
     this.startSliderRotation();
   }
+
+
+
 
   ngOnDestroy() {
     // Cleanup the interval when the component is destroyed

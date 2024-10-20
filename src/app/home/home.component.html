@@ -74,7 +74,7 @@
 
   <div>
     <h1 class="text-center m-3">What We Do</h1>
-    <p class="parag">We specialize in bringing the latest fashion trends to life. Our team works tirelessly to curate stylish, high-quality pieces that cater to a wide range of tastes and preferences. From casual wear to elegant evening outfits, we strive to offer products that make you feel confident and chic. We are committed to providing an exceptional shopping experience, offering personalized advice and ensuring that our customers find pieces that truly reflect their unique style.</p>
+    <p class="parag text-center">We specialize in bringing the latest fashion trends to life. Our team works tirelessly to curate stylish, high-quality pieces that cater to a wide range of tastes and preferences. From casual wear to elegant evening outfits, we strive to offer products that make you feel confident and chic. We are committed to providing an exceptional shopping experience, offering personalized advice and ensuring that our customers find pieces that truly reflect their unique style.</p>
   </div>
 
 
@@ -83,26 +83,38 @@
 
   <!-- swiper -->
 
-  <div class="container">
+  <div class="container mt-5 mb-5 d-flex flex-column">
+    <h1 class="text-center m-3">Our Products</h1>
+
     <div class="slider">
+
       <div class="box1">
+        <img [src]="products[0].image" class="d-block product" alt="Client 1 Photo">
       </div>
       <div class="box2">
+        <img [src]="products[1].image" class="d-block product" alt="Client 1 Photo">
       </div>
       <div class="box3">
+        <img [src]="products[10].image" class="d-block product" alt="Client 1 Photo">
       </div>
       <div class="box4">
+        <img [src]="products[15].image" class="d-block product" alt="Client 1 Photo">
       </div>
       <div class="box5">
+        <img [src]="products[18].image" class="d-block product" alt="Client 1 Photo">
       </div>
       <div class="box6">
+        <img [src]="products[7].image" class="d-block product" alt="Client 1 Photo">
+
       </div>
       <div class="box7">
+        <img [src]="products[13].image" class="d-block product" alt="Client 1 Photo">
       </div>
     </div>
+    <button type="button" class="btn ps-2 shop" routerLink="products">Shop Now</button>
   </div>
 
-  <h1 class="text-center">Testimonials</h1>
+  <h1 class="text-center mt-3">Testimonials</h1>
   <h3 class="text-center mt-2">Customer Feedback</h3>
 
   <div class="row mt-5 mb-1 ms-3 me-3">

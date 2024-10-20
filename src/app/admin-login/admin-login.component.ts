@@ -16,19 +16,19 @@ export class AdminLoginComponent {
     private router: Router, private auth_S: AuthService
   ) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      username: ['', [Validators.required]],
       password: ['', Validators.required]
     });
   }
 
   submitLoginForm() {
 
-    const email = this.loginForm.get('email')?.value;
+    const username = this.loginForm.get('username')?.value;
     const password = this.loginForm.get('password')?.value;
 
-    if (email == "admin@gmail.com" && password == "123456") {
+    if (username == "mor_2314" && password == "83r5^_") {
       // if (data == data_) {
-      this.auth_S.login(email, password).subscribe((res) => {
+      this.auth_S.login(username, password).subscribe((res) => {
         if (res && res.token) {
           this.token = res.token; // Assign response to token
           localStorage.setItem('token', this.token); // Store the token directly

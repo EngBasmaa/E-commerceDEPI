@@ -21,7 +21,7 @@ import { HomeComponent } from './home/home.component';
     AdminComponent,
     CheckoutComponent,
     AdminLoginComponent,
-    HomeComponent,
+    HomeComponent
 
   ],
   imports: [

@@ -18,7 +18,6 @@ export interface AuthorData {
   providedIn: 'root'
 })
 export class AuthService {
-  private url = "http://localhost:5000/author/";
   imageUrl?: string;
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -36,10 +35,11 @@ export class AuthService {
   }
 
 
-  login(email: string, password: string): Observable<any> {
-    return this.http.post<{ token: string }>(`${environment.baseApi}adminLogin/`, { email, password }).pipe(
+  login(username: string, password: string): Observable<any> {
+    return this.http.post<{ token: string }>(`${environment.baseApi}auth/login`, { username, password }).pipe(
       tap(response => {
         if (response?.token) {
+          console.log(response);
           console.log(response.token);
           localStorage.setItem('token', response.token);
           // this.router.navigate(['/dashboard']);

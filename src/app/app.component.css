@@ -1,5 +1,5 @@
 .row {
-    background: rgb(240, 228, 228);
+    background: #fafafa;
     min-height: calc(100vh - 15rem);
     width: 100%;
     margin-left: 0 !important;

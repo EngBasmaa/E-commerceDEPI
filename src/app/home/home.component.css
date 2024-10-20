@@ -6,12 +6,16 @@
 
 img {
     width: 100vw;
-    height: 60vh !important;
+    height: 70vh !important;
     object-fit: fill !important;
 }
 
 .carousel-inner {
     overflow: hidden;
+}
+
+.product {
+    width: 100%
 }
 
 .carousel-inner img {
@@ -35,7 +39,7 @@ img {
 .swiper-button-next,
 .swiper-button-prev,
 .swiper-pagination {
-    color: #000;
+    color: #000 !important;
 }
 
 /* ..................................................... */
@@ -119,7 +123,7 @@ img {
 .slider [class*="box"]:nth-child(2),
 .slider [class*="box"]:nth-child(6) {
     width: 100vh;
-    height: 40vh;
+    height: 50vh;
     transform: scale(0.4) translate(-50%, -50%);
     top: 20%;
     z-index: 2;
@@ -182,17 +186,18 @@ img {
 
 h1,
 h2 {
-    color: #921A40
+    color: #921A40;
+    align-items: center;
 }
 
 .list {
-    background: #ddbbb0 !important;
+    background: #ecd8d8 !important;
     padding-top: 3rem;
     padding-bottom: 1.5rem
 }
 
 .cont {
-    background: #ddbbb0 !important;
+    background: #ecd8d8 !important;
     padding-top: 1rem;
     padding-bottom: 2.5rem
 }
@@ -225,6 +230,10 @@ p.parag {
     border-radius: 50%;
 }
 
+.shop {
+    padding: 0.5rem 1.5rem !important
+}
+
 .do {
     gap: 3rem;
     list-style: none;
@@ -236,7 +245,7 @@ p.parag {
 }
 
 .testimonial-item {
-    background: #d59bad;
+    background: #ecd8d8;
     padding-top: 2rem;
     border-radius: 2rem;
 }

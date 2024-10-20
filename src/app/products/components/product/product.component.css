@@ -7,7 +7,7 @@
     display: inline-block;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(202, 37, 16, 0.3);
-    border: 2px solid red;
+    border: 2px solid #921A40;
 
 
 }
@@ -66,5 +66,5 @@ button:not(:disabled) {
     flex-wrap: wrap;
     gap: 0.5rem;
 
-    border: 2px solid red;
+    border: 2px solid #921A40;
 }
