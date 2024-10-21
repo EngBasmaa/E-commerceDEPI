@@ -20,7 +20,7 @@
       <tr *ngFor="let item of cartProducts; let index = index">
         <td><img src="{{item.item.image}}" alt="product image" loading="lazy"></td>
         <td>{{item.item.title}}</td>
-        <td>{{item.item.Price}}</td>
+        <td>{{item.item.price}}</td>
         <td>
           <div class="quantity">
             <button type="button" class="btn btn-dark" (click)="addAmount(index)">+</button>
@@ -28,7 +28,7 @@
             <button type="button" class="btn btn-dark" (click)="minsAmount(index)">-</button>
           </div>
         </td>
-        <td>{{item.item.Price * item.quantity}} L.E</td>
+        <td>{{item.item.price * item.quantity}} L.E</td>
         <td>
           <button type="button" class="btn btn-danger" (click)="deleteProduct(index)">Delete</button>
         </td>

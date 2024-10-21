@@ -29,14 +29,14 @@
 }
 
 .footer-links a {
-    color: #f4eeee;
+    color: #c05778;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 
 .footer-links a:hover {
-    color: #f5e9e4;
+    color: #921A40;
 }
 
 .social-links {
@@ -44,10 +44,12 @@
 }
 
 .social-links a {
-    color: #f9f9f9;
+    color: #c05778;
     font-size: 1.5rem;
     margin-right: 1rem;
     transition: color 0.3s ease;
+    text-align: center;
+    align-items: center
 }
 
 .social-links a:hover {

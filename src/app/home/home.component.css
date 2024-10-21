@@ -6,7 +6,7 @@
 
 img {
     width: 100vw;
-    height: 70vh !important;
+    height: 80vh !important;
     object-fit: fill !important;
 }
 
@@ -203,12 +203,12 @@ h2 {
 }
 
 h5 {
-    color: grey;
+    color: #a73c5d
 }
 
 .desc {
     /* color: #c5a195; */
-    color: #a73c5d
+    color: black;
 }
 
 p.parag {

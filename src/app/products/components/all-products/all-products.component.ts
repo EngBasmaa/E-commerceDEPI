@@ -53,8 +53,9 @@ export class AllProductsComponent {
   getProductsByCategory(keyword: string) {
     this.loading = true
     this.service.getProductsByCategory(keyword).subscribe((res: any) => {
-      this.loading = false
       this.products = res
+      this.loading = false
+
     })
   }
 

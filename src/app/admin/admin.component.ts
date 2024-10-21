@@ -3,7 +3,6 @@ import { CartsAdminService } from '../services/carts-admin.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CartItem } from '../models/cartItem';
 import { ProductsService } from '../products/services/products.service';
-// import { Product } from '../models/cartItem';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -31,24 +30,30 @@ export class AdminComponent implements OnInit {
     this.getAllCarts()
   }
 
-  getAllCarts() {
-    this.service.getAllCarts().subscribe((res: any) => {
+  getAllCarts(filterData?: any) {
+    this.service.getAllCarts(filterData).subscribe((res: any) => {
       this.carts = res
     })
   }
   applyFilter() {
-    let date = this.form.value
-    this.service.getAllCarts(date).subscribe((res: any) => {
-      this.carts = res
-    })
+    const startDate = this.form.get('start')?.value;
+    const endDate = this.form.get('end')?.value;
+
+    // Check if the dates are set
+    if (startDate && endDate) {
+      const filterData = {
+        start: startDate,
+        end: endDate
+      };
+
+      // Call getCarts with the filter data
+      this.getAllCarts(filterData);
+    } else {
+      // If no dates provided, load all carts
+      this.getAllCarts();
+    }
   }
 
-  // deleteCart(id: number) {
-  //   this.service.deleteCart(id).subscribe(res => {
-  //     this.getAllCarts()
-  //     alert("Cart Deleted Successfully")
-  //   })
-  // }
   createCart() {
     const cartData = {
       userId: 1,
@@ -66,18 +71,25 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  deleteCart(id: number) {
-    this.service.deleteCart(id).subscribe(res => {
-      this.carts = this.carts.filter(cart => cart.id !== id);
+  // deleteCart(id: number) {
+  //   this.service.deleteCart(id).subscribe(res => {
+  //     this.carts = this.carts.filter(cart => cart.id !== id);
 
-      this.getAllCarts();
+  //     this.getAllCarts();
 
-      alert("Cart Deleted Successfully");
-    }, err => {
-      console.error("Error deleting cart:", err);
-      alert("Failed to delete cart. Please try again.");
+  //     alert("Cart Deleted Successfully");
+  //   }, err => {
+  //     console.error("Error deleting cart:", err);
+  //     alert("Failed to delete cart. Please try again.");
+  //   });
+  // }
+
+  deleteCart(cartId: number) {
+    this.service.deleteCart(cartId).subscribe(() => {
+      this.getAllCarts();  // Refresh carts after deletion
     });
   }
+
 
   view(index: any) {
     this.products = []

@@ -6,6 +6,10 @@
     margin-top: 3rem;
 }
 
+h1 {
+    color: #921A40
+}
+
 .table .quantity {
     display: flex;
     justify-content: space-between;

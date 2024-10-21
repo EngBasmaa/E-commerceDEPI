@@ -2,13 +2,13 @@
   <div class="row d-flex flex-row justify-content-between align-items-center" *ngIf="!loading && data">
 
     <div class="col-md-6 col-sm-12">
-      <h1 class="mb-5 mt-3 text-center">{{data.title}}</h1>
+      <h1 class="mb-5 mt-3 ms-3 text-center">{{data.title}}</h1>
 
-      <img [src]="data.image" alt="product image" loading="lazy" />
+      <img [src]="data.image" alt="product image" loading="lazy" class="ms-3" />
     </div>
 
     <div class="boxx col-md-5 col-sm-12">
-      <div class="info">
+      <div class="info ps-3 pe-3">
         <ul class="list-unstyled">
           <li><strong>Category : </strong>{{data.category}}</li>
           <li><strong>Description : </strong><br>{{data.description}}</li>
