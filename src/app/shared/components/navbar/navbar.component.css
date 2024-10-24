@@ -16,7 +16,10 @@
 }
 
 
-
+.logoImage {
+  border-radius: 50%;
+  width: 3rem
+}
 
 .dropdown-item:hover {
   background-color: #ffcccc;
