@@ -24,9 +24,10 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "docs",
-            "baseHref": "/Fashion-Bazar-DEPI-E-Commerce-Graduation-Project/",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/Fashion-Bazar-DEPI-E-Commerce-Graduation-Project/",
+
             "polyfills": [
               "zone.js"
             ],
